@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+body{
+    margin: 0;
+    background-color: #f5f6f8;
+    color: #20242b;
+    font-family: Arial, sans-serif;
+}
+.logo h2{
+font-weight: 200;
+margin: 0;
+
+        }
+         .top{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 10px 30px;
+            color: black;
+     
+           
+           
+         }
+         .links a { 
+            text-decoration: none;
+            list-style: none;
+           color:black
+            
+         }
+         .links{
+            display: flex;
+            gap: 30px;
+         }
+         
+.hero{
+background: linear-gradient(90deg, rgba(0, 0, 0, .72), rgba(0, 0, 0, .18)), url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&auto=format&fit=crop");
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 14px;
+color: white;
+height: 340px;
+padding: 50px 8%;
+
+}
+.hero h2 { font-size: 38px; margin: 0; }
+.hero p { margin: 0; max-width: 420px; line-height: 1.5; }
+
+.first{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    padding: 10px 30px 30px;
+
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.box img{
+  width: 160px;
+  height: 235px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+button{
+    width: 120px;
+    height: 36px;
+    background-color: #d84a5d;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+.hero button:hover, .modal button:hover { background-color: #b9384a; }
+.cat{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 10px 30px 35px;
+}
+.box1{
+   grid-column: auto;
+}
+.box2{
+   grid-column: auto;
+}  
+.box3{
+   grid-column: auto;
+}  
+.box4{
+   grid-column: auto;
+}  
+
+    .box5{
+   grid-column: auto;
+}  
+.box6{
+  grid-column: auto;
+}
+.box7{
+    grid-column: auto;
+  
+}
+.box8{
+   grid-column: auto;
+  
+}
+.box9{
+     grid-column: auto;
+  
+}
+.box1 img,.box2 img,.box3 img,.box4 img,.box5 img ,.box6 img , .box7 img, .box7 img,.box8 img,.box9 img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.box img:hover, .cat img:hover, .single:hover{
+    transform: translateY(-4px);
+    transition: 0.3s;
+}
+.single{
+    background-color: white;
+    width: 260px;
+    padding-bottom: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+.single img {
+object-fit: cover;
+width: 100%;
+height: 165px;
+}
+.single span{
+     
+margin-top: 100px;
+}
+.cources{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    margin-top: 10px;
+    padding: 25px 20px 40px;
+}
+ .fotlinks{
+        display: flex;
+        gap:100px
+        
+    }
+    .one,.second,.third{
+        display: flex;
+        flex-direction: column;
+    }
+    .modal{
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        gap:15px;
+        padding:20px 30px;
+        border-radius: 10px;
+        background-color: aliceblue;
+        width: 320px;
+        position: fixed;
+        z-index: 20; top: 150px;
+    }
+    .modal.add{
+display: flex;
+    }
+    .modal span{
+        display: flex;
+        justify-content: flex-end;
+      
+        font-size: larger;
+        color:cadetblue;
+    }
+    
+    .popup{
+        display: flex;
+        justify-content: center;
+       
+    }
+    input{
+        width: 250px;
+        height: 40px;
+    }
+    button{
+        width: 250px;
+        height: 32px;
+        background-color: cadetblue;
+        color: white;
+        border-radius: 10px;
+        border: none;
+    }
+    .box span{
+        color: black;
+        text-align: center;
+    }
+    .cources{ text-align: center; }
+    .single span{
+        color: black;
+    }
+    
+</style>
+<body>
+<div id="navbar"></div>
+
+<div class="popup">
+          <div class="modal">
+            <span class="cancel">x</span>
+        <input id="name" type="text" placeholder="name">
+        <input id="email" type="text" placeholder="email">
+        <input id="password" type="text" placeholder="password">
+        <input id="age" type="text" placeholder="age">
+        <button class="submit">Register</button>
+    </div>
+    </div>
+    <div class="container">
+
+   
+    <div class="hover">
+    <div class="hero">
+       <h2>Just Enjoy</h2> 
+       <p>Enjoy your evening with great movies and series, all in one place.</p>
+       <button>Watch Now</button>
+    </div>
+    <h3 style="padding: 10px 30px; text-align: center;">Latest Movies</h3>
+   <section class="first">
+<div class="box">
+    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&auto=format&fit=crop">
+    <span>Midnight Story</span>
+</div>
+<div class="box">
+    <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=400&auto=format&fit=crop">
+    <span>New World</span>
+</div>
+<div class="box">
+    <img src="https://images.unsplash.com/photo-1485095329183-d0797cdc5676?w=400&auto=format&fit=crop">
+    <span>Last Summer</span>
+</div>
+<div class="box">
+    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&auto=format&fit=crop">
+    <span>City Lights</span>
+</div>
+<div class="box">
+    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&auto=format&fit=crop">
+    <span>Dream Screen</span>
+</div>
+<div class="box">
+    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=400&auto=format&fit=crop">
+    <span>Wild Road</span>
+</div>
+   </section>
+   <h3  style="padding: 10px 30px;">Categories</h3>
+   <div class="cat">
+    
+    <div class="box1">
+<img src="https://picsum.photos/seed/dramacat1/300/200">
+    </div>
+      <div class="box2">
+<img src="https://picsum.photos/seed/dramacat2/300/200">
+      </div>
+        <div class="box3">
+<img src="https://picsum.photos/seed/dramacat3/300/200">
+        </div>
+          <div class="box4">
+<img src="https://picsum.photos/seed/dramacat4/300/200">
+          </div>
+            <div class="box5">
+<img src="https://picsum.photos/seed/dramacat5/300/200">
+            </div>
+              <div class="box6">
+<img src="https://picsum.photos/seed/dramacat6/300/200">
+              </div>
+               <div class="box7">
+<img src="https://picsum.photos/seed/dramacat7/300/200">
+              </div>
+               <div class="box8">
+<img src="https://picsum.photos/seed/dramacat8/300/200">
+              </div>
+               <div class="box9">
+<img src="https://picsum.photos/seed/dramacat9/300/200">
+              </div>
+   </div>
+  <div class="cources">
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse1/300/200">
+    <span>
+        Action movies
+    </span>
+</div>
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse2/300/200">
+    <span>
+        Romantic movies
+    </span>
+</div>
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse3/300/200">
+    <span>
+        Family movies
+    </span>
+</div>
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse4/300/200">
+    <span>
+        Comedy movies
+    </span>
+</div>
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse5/300/200">
+    <span>
+        Thriller movies
+    </span>
+</div>
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse6/300/200">
+    <span>
+        Documentary
+    </span>
+</div>
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse7/300/200">
+    <span>
+        Animation
+    </span>
+</div>
+<div class="single">
+    <img src="https://picsum.photos/seed/dramacourse8/300/200">
+    <span>
+        Drama movies
+    </span>
+</div>
+  </div>
+</div>
+ </div>
+  <div class="footer"></div>
+</body>
+<script src="index.js"></script>
+</html>
