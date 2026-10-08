@@ -1,4 +1,4 @@
-
+cat > README.md << 'EOF'
 Movie website with user registration, login and user management.
 
 ## Stack
