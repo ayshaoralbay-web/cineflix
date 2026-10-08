@@ -1,4 +1,4 @@
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/3f91e545-65c0-43e8-8398-5f3e685b806a" /># CINEFLIX
+
 Movie website with user registration, login and user management.
 
 ## Stack
