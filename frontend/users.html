@@ -3,86 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users | CINEFLIX</title>
-    <style>
-        * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-            background-color: #f5f6f8;
-            color: #20242b;
-        }
-
-        main {
-            flex: 1;
-            width: min(100% - 40px, 1000px);
-            margin: 0 auto;
-            padding: 42px 0;
-        }
-
-        h1 { margin: 0 0 8px; }
-        .subtitle { margin: 0 0 24px; color: #667085; }
-
-        .table-container {
-            overflow-x: auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
-        }
-
-        .table {
-            width: 100%;
-            min-width: 600px;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 14px 16px;
-            text-align: left;
-            border-bottom: 1px solid #e8eaed;
-        }
-
-        th {
-            background-color: #20242b;
-            color: white;
-            font-size: 14px;
-        }
-
-        th:first-child { border-radius: 10px 0 0 0; }
-        th:last-child { border-radius: 0 10px 0 0; }
-        tr:last-child td { border-bottom: 0; }
-        tbody tr:hover { background-color: #fff5f6; }
-
-        .footer {
-            width: 100%;
-            margin-top: auto;
-        }
-    </style>
+    <meta name="theme-color" content="#211914">
+    <title>Members | CINEFLIX</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="navbar"></div>
-
-    <main>
-        <h1>Users</h1>
-        <p class="subtitle">Registered CINEFLIX users</p>
+    <main class="users-page">
+        <p class="eyebrow">The house list</p>
+        <h1>Members</h1>
+        <p class="page-intro">A look at the people who have taken their seats.</p>
         <div class="table-container">
             <table class="table">
+                <caption class="visually-hidden">Registered CINEFLIX members</caption>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Age</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
+                <tbody></tbody>
             </table>
         </div>
     </main>
-
     <div class="footer"></div>
     <script src="index.js"></script>
 </body>
